@@ -7,16 +7,24 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
+
 
 class ViewController: UIViewController {
     
     var coffeeInfo:[Coffee] = []
+    // 初始建立 NVActivityIndicatorView
+    let activityView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 80, height: 80), type: .ballRotateChase, color: .red)
+   
 
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         initData()
+        setupSubView()
     }
+    
+    
     
     func initData() {
         let urlString = "https://cafenomad.tw/api/v1.2/cafes/taipei"
@@ -32,9 +40,18 @@ class ViewController: UIViewController {
                 print(self.coffeeInfo)
                 DispatchQueue.main.async {
                     self.tableview.reloadData()//Tableview更新抓到的資料
+                    self.activityView.stopAnimating()
                 }
             }
         }.resume()
+       
+    }
+    
+    func setupSubView() {
+        activityView.center = self.view.center
+        // 啟動 NVActivityIndicatorView 動畫
+        activityView.startAnimating()
+        self.view.addSubview(activityView)
     }
 }
 

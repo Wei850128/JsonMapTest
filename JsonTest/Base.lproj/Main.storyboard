@@ -99,26 +99,39 @@
         <!--Show Detail View Controller-->
         <scene sceneID="KlO-yu-e2u">
             <objects>
-                <viewController id="8zq-qa-bYC" customClass="ShowDetailViewController" customModule="JsonTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="8zq-qa-bYC" customClass="ShowDetailViewController" customModule="JsonTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pyl-au-T5C">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u9l-dY-P7f">
-                                <rect key="frame" x="0.0" y="202" width="414" height="606"/>
+                                <rect key="frame" x="0.0" y="246" width="414" height="616"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdl-kF-XXE">
-                                <rect key="frame" x="8" y="60" width="398" height="24"/>
+                                <rect key="frame" x="8" y="104" width="398" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoe-Sk-K1m">
-                                <rect key="frame" x="8" y="134" width="398" height="24"/>
+                                <rect key="frame" x="8" y="178" width="398" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtX-4e-ccp">
+                                <rect key="frame" x="350" y="45" width="56" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="MmR-9E-ATl"/>
+                                    <constraint firstAttribute="height" constant="50.5" id="Uw5-OQ-tIN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button" backgroundImage="xmark.rectangle" catalog="system"/>
+                                <connections>
+                                    <action selector="btn:" destination="8zq-qa-bYC" eventType="touchUpInside" id="66D-F9-l5M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -128,7 +141,9 @@
                             <constraint firstItem="zdl-kF-XXE" firstAttribute="top" secondItem="w3c-Fi-4JI" secondAttribute="top" constant="60" id="Bu3-FW-YVQ"/>
                             <constraint firstItem="zdl-kF-XXE" firstAttribute="leading" secondItem="w3c-Fi-4JI" secondAttribute="leading" constant="8" id="E5t-1g-BiG"/>
                             <constraint firstItem="Qoe-Sk-K1m" firstAttribute="top" secondItem="zdl-kF-XXE" secondAttribute="bottom" constant="50" id="G8C-27-WER"/>
+                            <constraint firstItem="w3c-Fi-4JI" firstAttribute="trailing" secondItem="mtX-4e-ccp" secondAttribute="trailing" constant="8" id="GbQ-t1-MT3"/>
                             <constraint firstItem="u9l-dY-P7f" firstAttribute="trailing" secondItem="w3c-Fi-4JI" secondAttribute="trailing" id="N2G-eB-Sm3"/>
+                            <constraint firstItem="mtX-4e-ccp" firstAttribute="top" secondItem="w3c-Fi-4JI" secondAttribute="top" id="Pvs-KL-942"/>
                             <constraint firstItem="w3c-Fi-4JI" firstAttribute="trailing" secondItem="Qoe-Sk-K1m" secondAttribute="trailing" constant="8" id="Xyx-gn-XDR"/>
                             <constraint firstItem="w3c-Fi-4JI" firstAttribute="bottom" secondItem="u9l-dY-P7f" secondAttribute="bottom" id="cTV-ub-hqL"/>
                             <constraint firstItem="Qoe-Sk-K1m" firstAttribute="leading" secondItem="w3c-Fi-4JI" secondAttribute="leading" constant="8" id="psu-cD-z8E"/>
@@ -149,5 +164,6 @@
     </scenes>
     <resources>
         <image name="coffee" width="710" height="396"/>
+        <image name="xmark.rectangle" catalog="system" width="128" height="93"/>
     </resources>
 </document>

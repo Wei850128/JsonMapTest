@@ -23,6 +23,9 @@ class ShowDetailViewController: UIViewController {
         
     }
     
+    @IBAction func btn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     func initData() {
         name.text = data?.name
         address.text = data?.address
