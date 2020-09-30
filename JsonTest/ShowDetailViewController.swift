@@ -14,13 +14,13 @@ class ShowDetailViewController: UIViewController {
     var latitude=0.0
     var longitude=0.0
     var data:Coffee?
+    
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var address: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         initData()
-        
     }
     
     @IBAction func btn(_ sender: Any) {

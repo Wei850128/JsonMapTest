@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         setupSubView()
     }
     
+    //dadasdas
     
     
     func initData() {
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
         
         let url = URL(string: urlString)
         
-        
+        //產生下載的動作任務
         URLSession.shared.dataTask(with: url!) { (data, reponse, error) in
             let decorder = JSONDecoder()
             //使用JSONDecoder的方式將抓到的資料轉換成剛剛定義好的Coffee型別
@@ -43,8 +44,7 @@ class ViewController: UIViewController {
                     self.activityView.stopAnimating()
                 }
             }
-        }.resume()
-       
+        }.resume() //執行下載任務
     }
     
     func setupSubView() {
