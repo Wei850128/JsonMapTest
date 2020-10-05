@@ -29,7 +29,6 @@ class ViewController: UIViewController {
     
     func initData() {
         let urlString = "https://cafenomad.tw/api/v1.2/cafes/taipei"
-        
         let url = URL(string: urlString)
         
         //產生下載的動作任務
