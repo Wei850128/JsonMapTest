@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             }
         }.resume() //執行下載任務
     }
-    
+     
     
     
     
