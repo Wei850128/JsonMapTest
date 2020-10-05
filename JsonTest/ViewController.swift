@@ -43,9 +43,10 @@ class ViewController: UIViewController {
                     self.activityView.stopAnimating()
                 }
             }
+            
         }.resume() //執行下載任務
     }
-     
+    
     func setupSubView() {
         activityView.center = self.view.center
         // 啟動 NVActivityIndicatorView 動畫
